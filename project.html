@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cold-drink</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&family=Hurricane&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&family=Hurricane&family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="./project.css" rel="stylesheet">
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"><img src="./images/coca-cola logo.jpg" class="logo"></a>
+            <ul>
+                <li><a href="#"><span></span>Home</a></li>
+                <li><a href="#"><span></span>Products</a></li>
+                <li><a href="#"><span></span>What's new</a></li>
+                <li><a href="#"><span></span>Contact</a></li>
+                <li><a href="#"><span></span>Newsletter</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="text-box">
+                <h2 class="sliding-effect">That's what<br><span>I like!</span></h2>
+                <p class="sliding-effect">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ad hic ipsum 
+                voluptates ipsa corporis quasi magnam earum impedit repudiandae inventore 
+                quia, aperiam accusantium et, fuga qui, repellat facere aliquam at voluptate? 
+                Cumque mollitia quam quae!</p>
+                <a href="#" class="sliding-effect">View All Products</a>
+            </div>
+            <div class="imgbox">
+                <img src="./images/coca-cola2.png" class="coca-cola">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="./images/sprite .jpg" onclick="imgSlider('./images/sprite1.jpg');changeBgColor('linear-gradient(360deg,lightgreen,darkgreen)');changeLogo('./images/sprite logo.jpg');"></li>
+            <li><img src="./images/pepsi.jpg" onclick="imgSlider('./images/pepsi.jpg');changeBgColor('linear-gradient(180deg,rgb(0, 45, 109),black');changeLogo('./images/pepsi.jpg')"></li>
+            <li><img src="./images/coca-cola2.png" onclick="imgSlider('./images/coca-cola2.png');changeBgColor('rgb(255, 25, 25)');changeLogo('./images/coca-cola logo.jpg')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.coca-cola').src = anything;
+        }
+        function changeBgColor(color){
+            const sec=document.querySelector('.sec');
+            sec.style.background=color; 
+        }
+        function changeLogo(anything){
+            document.querySelector('.logo').src=anything;
+        }
+        // function changeLogoBorder(color){
+        //     document.querySelector('.logo');
+        //     logo.style.border=color;
+        // }
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
